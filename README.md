@@ -40,3 +40,14 @@ Simulator ROS packages for the Clearpath Husky.
  - husky_gazebo : Gazebo plugin definitions and extensions to the robot URDF.
 
 For Husky instructions and tutorials, please see http://wiki.ros.org/Robots/Husky
+
+ROS Melodic installation tips
+==============
+To build husky on melodic, you need to install these things using apt:
+ - ros-melodic-robot-localization
+ - ros-melodic-twist-mux
+You also need these two things that are not in the apt repository, clone the repos in your workspace, they should build as is:
+ - https://github.com/ros-visualization/interactive_marker_twist_server
+ - https://github.com/clearpathrobotics/LMS1xx
+
+
