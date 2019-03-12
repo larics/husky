@@ -50,3 +50,10 @@ To build husky on melodic, you need to install these things using apt:
 You also need these two things that are not in the apt repository, clone the repos in your workspace, they should build as is:
  - https://github.com/ros-visualization/interactive_marker_twist_server
  - https://github.com/clearpathrobotics/LMS1xx
+ 
+ Running the simulation
+ ==============
+    $ roslaunch husky_gazebo husky_empty_world.launch namespace:=<namespace>
+    $ roslaunch husky_navigation move_base_mapless_demo.launch namespace:=<namespace>
+    
+ Send navigation goal to ```<namespace>/move_base_simple/goal``` topic.
