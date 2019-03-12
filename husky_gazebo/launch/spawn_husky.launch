@@ -27,7 +27,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   <arg name="multimaster" default="false"/>
 
-  <arg name="robot_namespace" default="/"/>
+  <arg name="robot_namespace" default="husky"/>
 
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
@@ -62,6 +62,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <group unless="$(arg multimaster)">
       <include file="$(find husky_control)/launch/control.launch">
         <arg name="multimaster" value="$(arg multimaster)"/>
+	<arg name="robot_namespace" value="$(arg robot_namespace)"/>
         <arg name="laser_enabled" value="$(arg laser_enabled)"/>
         <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
         <arg name="urdf_extras" value="$(arg urdf_extras)"/>

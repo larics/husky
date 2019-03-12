@@ -24,10 +24,13 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCL
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
-  
-  <!--- Run Move Base -->  
-  <include file="$(find husky_navigation)/launch/move_base.launch">
-    <arg name="no_static_map" value="true"/>
-  </include>
+    <arg name="namespace" default="husky"/>
+
+    <group ns="$(arg namespace)">
+  	<!--- Run Move Base -->  
+	<include file="$(find husky_navigation)/launch/move_base.launch">
+    		<arg name="no_static_map" value="true"/>
+  	</include>
+    </group>
   
 </launch>
