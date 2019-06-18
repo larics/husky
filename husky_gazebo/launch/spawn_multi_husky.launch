@@ -191,8 +191,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <param name="local_costmap/width" value="10.0"/>
     <param name="local_costmap/height" value="10.0"/>
-    <param name="local_costmap/robot_base_frame" value="$(arg robot_namespace)/base_link"/>
-    <param name="global_costmap/robot_base_frame" value="$(arg robot_namespace)/base_link"/>
+    <param name="local_costmap/robot_base_frame" value="/$(arg robot_namespace)/base_link"/>
+    <param name="global_costmap/robot_base_frame" value="/$(arg robot_namespace)/base_link"/>
     
     <!-- global costmap with laser, for odom_navigation_demo -->
     <rosparam file="$(find husky_navigation)/config/costmap_global_laser.yaml" command="load" ns="global_costmap"/>

@@ -1,4 +1,4 @@
-global_frame: world
+global_frame: /world
 rolling_window: true
 
 plugins:
